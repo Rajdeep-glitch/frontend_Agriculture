@@ -17,7 +17,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
-                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -29,37 +29,103 @@
     <main>
         <section id="hero">
             <h1>Welcome to Our Agriculture Initiative</h1>
-            <p>Empowering farmers through innovation and sustainability.</p>
+            <p>Empowering farmers through innovation and sustainability. Join us in transforming the agricultural landscape with smart, sustainable practices.</p>
         </section>
 
         <section id="services">
             <h2>Our Services</h2>
             <ul>
-                <li>Consultation on Sustainable Practices</li>
-                <li>Workshops on Modern Farming Techniques</li>
-                <li>Access to Agricultural Resources and Tools</li>
+                <li>Consultation on Sustainable Practices: Expert advice on water conservation, organic farming, and eco-friendly pest control.</li>
+                <li>Workshops on Modern Farming Techniques: Hands-on training in hydroponics, vertical farming, and soil health management.</li>
+                <li>Access to Agricultural Resources and Tools: Get access to quality seeds, fertilizers, farming equipment, and more.</li>
+                <li>Market Insights and Pricing: Stay informed with real-time market data and trends to make smarter business decisions.</li>
             </ul>
+        </section>
+
+        <section id="agriculture-products">
+            <h2>Explore Agriculture-Related Products</h2>
+            <p>We offer a wide range of products to support your farming journey. From high-quality seeds to state-of-the-art agricultural tools, we have everything you need to succeed.</p>
+            <div class="products">
+                <div class="product">
+                    <h3>🌱 High-Quality Seeds</h3>
+                    <p>Choose from a variety of high-yielding and resilient seeds to enhance your crop production.</p>
+                    <button onclick="learnMore('seeds')">Learn More</button>
+                </div>
+                <div class="product">
+                    <h3>🌾 Fertilizers & Soil Health</h3>
+                    <p>Our fertilizers are designed to enrich your soil, ensuring optimal growth for your crops.</p>
+                    <button onclick="learnMore('fertilizers')">Learn More</button>
+                </div>
+                <div class="product">
+                    <h3>🚜 Farming Tools & Equipment</h3>
+                    <p>Access modern farming tools and equipment that will make your work easier and more efficient.</p>
+                    <button onclick="learnMore('tools')">Learn More</button>
+                </div>
+            </div>
         </section>
 
         <section id="community">
             <h2>Join Our Community</h2>
-            <p>Connect with fellow farmers and agripreneurs to share knowledge and experiences.</p>
+            <p>Connect with fellow farmers, agripreneurs, and experts to share knowledge, experiences, and resources. Building a supportive network is key to success in agriculture!</p>
             <button onclick="openForum()">Visit Forum</button>
         </section>
 
         <section id="entrepreneurship">
             <h2>Entrepreneurship Development</h2>
-            <p>Explore opportunities in agriculture and learn how to start your own venture.</p>
+            <p>Explore opportunities in agriculture and learn how to start your own venture. We provide mentorship, funding opportunities, and resources for aspiring agri-entrepreneurs.</p>
             <ul>
-                <li>Organic Farming</li>
-                <li>Agri-Tech Solutions</li>
-                <li>Food Processing</li>
+                <li>🌿 Organic Farming: Start your own organic farm and tap into the growing demand for pesticide-free produce.</li>
+                <li>🚜 Agri-Tech Solutions: Innovate with technology to solve challenges like irrigation, pest management, and crop monitoring.</li>
+                <li>🍞 Food Processing: Add value to your crops by venturing into food processing, packaging, and marketing.</li>
             </ul>
+            <button onclick="openEntrepreneurshipResources()">Explore Resources</button>
+        </section>
+
+        <section id="success-stories">
+            <h2>Success Stories</h2>
+            <p>Get inspired by our community members who have successfully started their agri-businesses. Learn from their journeys and apply their insights to your own ventures.</p>
+            <div class="testimonial">
+                <p>"Thanks to the guidance from Agriculture Initiative, I successfully launched my organic vegetable farm, which is now flourishing!"</p>
+                <strong>- Anjali Sharma, Organic Farmer</strong>
+            </div>
+            <div class="testimonial">
+                <p>"I used to struggle with market access, but the initiative helped me connect with buyers and now I export my products globally!"</p>
+                <strong>- Ramesh Kumar, Exporter</strong>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2023 Agriculture Initiative. All rights reserved.</p>
     </footer>
+
+    <script>
+        function learnMore(productType) {
+            alert(`You are now viewing more details about ${productType}. Check back soon for more resources and product links.`);
+        }
+
+        function openForum() {
+            alert('Redirecting you to the Community Forum!');
+            window.location.href = 'community.html';
+        }
+
+        function openEntrepreneurshipResources() {
+            alert('Redirecting you to Entrepreneurship Resources!');
+            window.location.href = 'entrepreneurship.html';
+        }
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        header { background: #4CAF50; padding: 10px; text-align: center; color: white; }
+        nav ul { display: flex; justify-content: center; list-style: none; padding: 0; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        #hero { background: #f4f4f4; padding: 20px; text-align: center; }
+        #services, #agriculture-products, #community, #entrepreneurship { margin: 20px; }
+        .products { display: flex; justify-content: space-between; }
+        .product { width: 30%; padding: 15px; background: #f9f9f9; border-radius: 5px; }
+        button { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        .testimonial { background: #f0f0f0; padding: 15px; margin: 10px 0; border-radius: 8px; }
+    </style>
 </body>
 </html>

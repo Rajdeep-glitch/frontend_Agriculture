@@ -16,7 +16,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
-                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -37,12 +37,113 @@
                 <br>
                 <button type="submit">Login</button>
             </form>
+
             <p>Don't have an account? <a href="register.html">Register here</a></p>
+
+            <div id="agriculture-info">
+                <h3>Explore Opportunities in Agriculture</h3>
+                <p>Looking to make an impact in the agricultural sector? Discover new possibilities to start your own venture:</p>
+                <ul>
+                    <li>🌱 **Organic Farming** - Learn how to grow pesticide-free crops and meet the growing demand for organic produce.</li>
+                    <li>🚜 **Agri-Tech Solutions** - Dive into the world of technology in agriculture to optimize farming practices.</li>
+                    <li>🍞 **Food Processing** - Add value to your crops by venturing into food processing and packaging.</li>
+                </ul>
+                <button onclick="exploreAgriOpportunities()">Learn More</button>
+            </div>
+
+            <div id="entrepreneurship-mentorship">
+                <h3>Get Mentorship for Agri-Entrepreneurs</h3>
+                <p>We offer mentorship to aspiring agri-entrepreneurs. Let us guide you through your agricultural business journey.</p>
+                <button onclick="openMentorshipPage()">Start Mentorship</button>
+            </div>
+
+            <div id="success-stories">
+                <h3>Success Stories</h3>
+                <p>Read how others have successfully started their agricultural ventures and grown them into thriving businesses:</p>
+                <div class="testimonial">
+                    <p>"I started with a small organic farm, and today I'm supplying produce to local markets and stores. The support I received from this platform has been invaluable!"</p>
+                    <strong>- Rina Patel, Organic Farmer</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"With guidance on agri-tech solutions, my farm has been optimized for higher yields and more sustainable practices. I'm now expanding into new markets!"</p>
+                    <strong>- Rajesh Kumar, Agri-Tech Entrepreneur</strong>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2023 Dynamic Website. All rights reserved.</p>
     </footer>
+
+    <script>
+        function exploreAgriOpportunities() {
+            alert("Redirecting you to Agriculture Opportunities page for more details.");
+            window.location.href = 'entrepreneurship.html';  // Replace with actual page link
+        }
+
+        function openMentorshipPage() {
+            alert("Redirecting you to the mentorship program page.");
+            window.location.href = 'mentorship.html';  // Replace with actual mentorship page link
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        #agriculture-info,
+        #entrepreneurship-mentorship,
+        #success-stories {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .testimonial {
+            background-color: #eaeaea;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </body>
 </html>

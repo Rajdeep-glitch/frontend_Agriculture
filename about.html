@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Dynamic Website</title>
+    <title>About Us - KrishiBharat</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -27,28 +27,112 @@
 
     <main>
         <section>
-            <h2>About Us</h2>
-            <p>We are dedicated to transforming the agricultural industry through innovation and sustainability.</p>
-            <h3>Our Values </h3>
-            <ul>
-                <li>Innovation</li>
-                <li>Sustainability</li>
-                <li>Community Engagement</li>
-                <li>Education</li>
-            </ul>
-            <h3>Entrepreneurship Development  </h3>
-            <p>We focus on empowering aspiring agripreneurs by providing resources, training, and support to help them succeed in the agricultural sector.</p>
-            <img src="images/about.jpg" alt="About Us" style="width:100%; height:auto;">
-            <section>
+            <h2>About KrishiBharat</h2>
+            <p>We are dedicated to transforming the agricultural industry through innovation, technology, and entrepreneurship.</p>
             
-                <h3>Our Mission</h3>
-                <p>To empower farmers and promote sustainable practices through education and technology.</p>
-            </section>
+            <h3>Our Core Values</h3>
+            <ul>
+                <li><strong>Innovation:</strong> Leveraging modern technology for smarter farming.</li>
+                <li><strong>Sustainability:</strong> Promoting eco-friendly agricultural practices.</li>
+                <li><strong>Community Engagement:</strong> Connecting farmers, agripreneurs, and experts.</li>
+                <li><strong>Education:</strong> Providing training and workshops on agribusiness.</li>
+            </ul>
+
+            <h3>Empowering Agripreneurs</h3>
+            <p>We focus on empowering aspiring agripreneurs by providing:</p>
+            <ul>
+                <li>Access to funding and investment opportunities.</li>
+                <li>Training on business models, marketing, and farm management.</li>
+                <li>Guidance on government policies and subsidies.</li>
+                <li>Networking opportunities with successful agricultural entrepreneurs.</li>
+            </ul>
+
+            <h3>Technology in Agriculture</h3>
+            <p>Technology is revolutionizing the agricultural sector. At KrishiBharat, we support farmers in adopting:</p>
+            <ul>
+                <li><strong>Precision Farming:</strong> Using sensors and AI for optimized crop production.</li>
+                <li><strong>Drone Technology:</strong> Aerial monitoring for better farm management.</li>
+                <li><strong>Hydroponics & Vertical Farming:</strong> Innovative methods to increase yield.</li>
+                <li><strong>Blockchain in Agriculture:</strong> Ensuring transparency in the supply chain.</li>
+            </ul>
+
+            <h3>Our Impact</h3>
+            <p>Since our inception, KrishiBharat has helped:</p>
+            <ul>
+                <li>Over <strong>10,000 farmers</strong> transition to sustainable farming.</li>
+                <li>More than <strong>500 agripreneurs</strong> launch their startups.</li>
+                <li>Conduct <strong>100+ workshops</strong> on modern agricultural practices.</li>
+                <li>Establish direct market connections for farmers to sell their produce.</li>
+            </ul>
+
+            <h3>Join Our Agripreneur Community</h3>
+            <p>Are you passionate about agriculture and entrepreneurship? Join our community for mentorship, funding opportunities, and expert guidance.</p>
+            <button onclick="window.location.href='community.html'">Join Now</button>
+
+            <h3>Frequently Asked Questions (FAQ)</h3>
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-question">How can I start an agribusiness?</button>
+                    <p class="faq-answer">Start by researching the market, selecting a niche, creating a business plan, and seeking guidance from KrishiBharat experts.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What funding options are available for agripreneurs?</button>
+                    <p class="faq-answer">There are government subsidies, bank loans, venture capital, and crowdfunding options available.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does technology improve farming?</button>
+                    <p class="faq-answer">Technology enhances productivity through smart irrigation, AI-powered crop management, and automated machinery.</p>
+                </div>
+            </div>
+
+            <h3>Success Stories</h3>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"KrishiBharat helped me scale my organic farming business and connect with buyers directly!"</p>
+                    <strong>- Rajesh Kumar, Agripreneur</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"Through their training program, I learned how to use hydroponics and increased my yield by 30%."</p>
+                    <strong>- Sunita Sharma, Urban Farmer</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"The mentorship program gave me the confidence to start my agri-tech startup!"</p>
+                    <strong>- Aniket Verma, Agri-Tech Founder</strong>
+                </div>
+            </div>
+
+            <img src="images/about.jpg" alt="Agriculture and Entrepreneurship" style="width:100%; height:auto;">
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Dynamic Website. All rights reserved.</p>
+        <p>&copy; 2025 KrishiBharat. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqQuestions = document.querySelectorAll(".faq-question");
+
+            faqQuestions.forEach((question) => {
+                question.addEventListener("click", function () {
+                    this.nextElementSibling.classList.toggle("show");
+                });
+            });
+        });
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        nav ul { display: flex; list-style: none; padding: 0; }
+        nav ul li { margin-right: 15px; }
+        .hide { display: none; }
+        .faq-item { margin-bottom: 10px; }
+        .faq-question { background: #007bff; color: white; border: none; padding: 10px; cursor: pointer; }
+        .faq-answer { display: none; background: #f1f1f1; padding: 10px; }
+        .faq-answer.show { display: block; }
+        .testimonial-slider { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        .testimonial { margin-bottom: 15px; }
+        button { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
+    <title>Feedback & Innovation Hub - KrishiBharat</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -16,7 +16,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
-                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -26,28 +26,96 @@
     </header>
 
     <main>
-        <h2>Feedback Form</h2>
-        <form id="feedback-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+        <h2>🌾 Feedback & Innovation Hub</h2>
+        <p>We value your feedback! Help us improve **agriculture-related products & entrepreneurship development** by sharing your insights.</p>
+
+        <section>
+            <h3>📌 What Type of Feedback Are You Providing?</h3>
+            <select id="feedback-type">
+                <option value="product">🌿 Product Review (Seeds, Fertilizers, Tools)</option>
+                <option value="business">📈 Business Growth & Funding</option>
+                <option value="farming-tech">🚜 Farming Technology & Innovations</option>
+                <option value="market-trends">📊 Market Trends & Pricing</option>
+                <option value="sustainability">🌍 Sustainability & Organic Farming</option>
+                <option value="other">❓ Other</option>
+            </select>
+        </section>
+
+        <section>
+            <h3>⭐ Rate Your Experience</h3>
+            <div class="rating">
+                <span onclick="setRating(1)">⭐</span>
+                <span onclick="setRating(2)">⭐</span>
+                <span onclick="setRating(3)">⭐</span>
+                <span onclick="setRating(4)">⭐</span>
+                <span onclick="setRating(5)">⭐</span>
+            </div>
+            <p id="rating-message">Click on stars to rate</p>
+        </section>
+
+        <section>
+            <h3>✍️ Submit Your Feedback</h3>
+            <form id="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">🚀 Submit Feedback</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>💡 How Can We Help?</h3>
+            <p>Let us know if you need assistance with **agripreneurship, funding, market access, or farming techniques.**</p>
+            <button onclick="contactSupport()">📞 Contact Support</button>
+        </section>
+
+        <section>
+            <h3>🌟 Success Stories from Our Community</h3>
+            <div class="testimonial">
+                <p>"I started my own organic farm with the help of KrishiBharat's resources and market connections!"</p>
+                <strong>- Amit Verma, Agripreneur</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Thanks to the **E-Marketplace**, I now sell my produce directly and make 30% more profits!"</p>
+                <strong>- Radha Devi, Farmer</strong>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Agriculture Initiative. All rights reserved.</p>
+        <p>&copy; 2025 KrishiBharat. All rights reserved.</p>
     </footer>
 
     <script>
+        function setRating(stars) {
+            document.getElementById('rating-message').innerText = `You rated: ${stars} ⭐`;
+        }
+
         document.getElementById('feedback-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Thank you for your feedback!');
-            this.reset(); // Reset the form after submission
+            alert('🚀 Thank you for your valuable feedback! We will use it to improve.');
+            this.reset(); // Reset form
         });
+
+        function contactSupport() {
+            alert('📞 Connecting you to support...');
+            window.location.href = "contact.html";
+        }
     </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        nav ul { display: flex; list-style: none; padding: 0; }
+        nav ul li { margin-right: 15px; }
+        .rating { font-size: 2rem; cursor: pointer; }
+        .testimonial { background: #f9f9f9; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        button { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; margin: 5px 0; }
+    </style>
 </body>
 </html>

@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultural Map of West Bengal</title>
+    <title>Agricultural Map of India</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map { height: 600px; }
+        .info-box {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+        .info-box h3 {
+            margin-top: 0;
+        }
+        .resources {
+            margin-top: 20px;
+        }
+        .resources a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
-    <title>MAP - Dynamic Website</title>
 </head>
 <body>
     <header>
@@ -21,7 +37,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
-                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -29,12 +45,31 @@
             </ul>
         </nav>
     </header>
+    
     <header>
-        <h1>Agricultural Map of West Bengal, India</h1>
+        <h1>Agricultural Map of India</h1>
+        <p>Explore the diverse agricultural practices and products across India. From the wheat fields of Punjab to the cotton farms of Gujarat, see where key crops are grown.</p>
     </header>
+
     <main>
         <div id="map"></div>
+
+        <div class="info-box">
+            <h3>Agriculture and Entrepreneurship Across India</h3>
+            <p>India's agriculture is a mix of traditional crops and emerging agri-businesses. Farmers from all over the country are adopting modern techniques to grow crops such as rice, wheat, cotton, and spices. The country offers ample opportunities for aspiring agripreneurs in various sectors like organic farming, food processing, and agri-tech.</p>
+        </div>
+
+        <div class="resources">
+            <h3>Useful Resources for Farmers and Agri-Entrepreneurs</h3>
+            <ul>
+                <li><a href="https://www.icar.org.in/" target="_blank">Indian Council of Agricultural Research</a></li>
+                <li><a href="https://www.agriwestbengal.com" target="_blank">Agriculture and Farm Development Department, West Bengal</a></li>
+                <li><a href="entrepreneurship.html" target="_blank">Explore Agri-Entrepreneurship Opportunities</a></li>
+                <li><a href="contact.html" target="_blank">Get in touch with local Agri-Tech Startups</a></li>
+            </ul>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2025 Agricultural Initiative. All rights reserved.</p>
     </footer>
@@ -42,7 +77,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // Initialize the map
-        const map = L.map('map').setView([22.9868, 87.8550], 7); // Centered on West Bengal
+        const map = L.map('map').setView([20.5937, 78.9629], 5); // Centered on India
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -50,15 +85,22 @@
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        // Example markers for different crops
+        // Crop regions across India
         const crops = [
-            { name: "Rice", location: [23.2580, 88.5630], description: "Major rice-producing area." },
-            { name: "Tea", location: [26.1520, 88.6120], description: "Famous for Darjeeling tea." },
-            { name: "Jute", location: [22.5750, 88.3639], description: "Jute cultivation area." },
-            // Add more crops and their locations
+            { name: "Rice", location: [23.2580, 88.5630], description: "West Bengal is a major rice-producing area, feeding millions across India." },
+            { name: "Tea", location: [26.1520, 88.6120], description: "The Darjeeling region is famous for its premium tea varieties." },
+            { name: "Jute", location: [22.5750, 88.3639], description: "Jute cultivation is concentrated in West Bengal, making India a leading producer." },
+            { name: "Wheat", location: [30.7333, 76.7794], description: "Punjab is known as the 'Granary of India' and is a major wheat-producing region." },
+            { name: "Cotton", location: [21.1465, 79.0882], description: "Vidarbha region in Maharashtra is known for large-scale cotton farming." },
+            { name: "Sugarcane", location: [25.5941, 85.1376], description: "Bihar is a key producer of sugarcane, which supports the sugar industry." },
+            { name: "Spices", location: [10.8505, 76.2711], description: "Kerala is renowned for its spice cultivation, including pepper, cardamom, and vanilla." },
+            { name: "Apple", location: [32.0134, 77.2005], description: "Himachal Pradesh's apple orchards are a major source of fruit production." },
+            { name: "Maize", location: [20.7937, 85.8312], description: "Odisha is a major producer of maize, used both for food and industrial purposes." },
+            { name: "Rice", location: [18.5204, 73.8567], description: "Maharashtra's Konkan region is a rice-growing hub, especially for organic farming." },
+            { name: "Pulses", location: [23.0225, 72.5714], description: "Gujarat is a major producer of pulses like gram and tur." }
         ];
 
-        // Add markers to the map
+        // Add markers to the map for each crop
         crops.forEach(crop => {
             const marker = L.marker(crop.location).addTo(map);
             marker.bindPopup(`<b>${crop.name}</b><br>${crop.description}`);

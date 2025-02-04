@@ -1,3 +1,4 @@
+// Define the question sets
 const questionSets = {
     "Agriculture": [
         { question: "What is the primary crop grown in West Bengal?", options: ["Rice", "Wheat", "Jute", "Barley"], answer: "Rice" },
@@ -9,7 +10,13 @@ const questionSets = {
         { question: "Which of the following is a leguminous crop?", options: ["Wheat", "Rice", "Soybean", "Maize"], answer: "Soybean" },
         { question: "What is the main pest affecting rice crops?", options: ["Aphids", "Brown Plant Hopper", "Bollworm", "Termites"], answer: "Brown Plant Hopper" },
         { question: "Which method is best for conserving soil moisture?", options: ["Plowing", "Mulching", "Burning residues", "Deforestation"], answer: "Mulching" },
-        { question: "Which vitamin is found in high amounts in carrots?", options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin B12"], answer: "Vitamin A" }
+        { question: "Which vitamin is found in high amounts in carrots?", options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin B12"], answer: "Vitamin A" },
+        // Added Agriculture-Related Products and Entrepreneurship Questions
+        { question: "What is a key challenge faced by agri-entrepreneurs?", options: ["Access to markets", "High initial capital", "Lack of skilled labor", "All of the above"], answer: "All of the above" },
+        { question: "Which of the following is a common value-added agricultural product?", options: ["Rice", "Milk", "Sugar", "Leather"], answer: "Milk" },
+        { question: "What is 'farm-to-table' in agriculture?", options: ["Growing crops for export", "Selling crops to retailers", "Direct sales from farm to consumer", "Selling processed food"], answer: "Direct sales from farm to consumer" },
+        { question: "Which sector is most important for promoting agricultural entrepreneurship?", options: ["Finance and Investment", "Technology and Innovation", "Government Policies", "All of the above"], answer: "All of the above" },
+        { question: "Which of these is a sustainable agricultural practice?", options: ["Monocropping", "Chemical fertilizers", "Agroforestry", "Irrigation with pesticides"], answer: "Agroforestry" }
     ],
     "Technology": [
         { question: "What does CPU stand for?", options: ["Central Processing Unit", "Central Programming Unit", "Central Performance Unit", "Central Power Unit"], answer: "Central Processing Unit" },
@@ -103,4 +110,22 @@ function changeQuestion() {
     } else {
         alert("Invalid question number!");
     }
+}
+
+// Explanation for Correct/Incorrect Answers
+function showExplanation(answer, isCorrect) {
+    const explanation = {
+        "Farm-to-table": "Farm-to-table refers to the practice of selling food directly from local farms to consumers, eliminating the need for retailers or wholesalers. This ensures that fresh produce reaches the consumer while supporting local agriculture."
+    };
+
+    let explanationText = '';
+    if (isCorrect) {
+        explanationText = `Correct! ${explanation[answer]}`;
+    } else {
+        explanationText = `Incorrect. The correct answer is: ${answer}. ${explanation[answer]}`;
+    }
+    
+    const explanationElement = document.createElement('p');
+    explanationElement.textContent = explanationText;
+    document.body.appendChild(explanationElement);
 }

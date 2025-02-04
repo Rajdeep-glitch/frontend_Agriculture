@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Development - KrishiBharat</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -15,7 +16,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
-                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -26,18 +27,135 @@
 
     <main>
         <section>
-            <h2>Entrepreneurship Development</h2>
-            <p>Explore opportunities in agriculture and learn how to start your own venture.</p>
-            <ul>
-                <li>Organic Farming</li>
-                <li>Agri-Tech Solutions</li>
-                <li>Food Processing</li>
-            </ul>
+            <h2>🌱 Entrepreneurship in Agriculture</h2>
+            <p>Turn your agricultural ideas into a profitable business! Explore **opportunities, funding, training, and expert mentorship** to start your journey as an **agripreneur**.</p>
         </section>
+
+        <section>
+            <h3>🚀 Business Opportunities in Agriculture</h3>
+            <p>Discover the most **profitable** and **sustainable** agribusiness models:</p>
+            <ul>
+                <li>🌿 **Organic Farming** - Sell chemical-free produce.</li>
+                <li>🚜 **Agri-Tech Solutions** - Use AI & IoT for smart farming.</li>
+                <li>🍏 **Food Processing** - Value-added products from farm produce.</li>
+                <li>🌾 **Agri Export Business** - Export grains, spices, and dairy.</li>
+                <li>🐝 **Beekeeping & Honey Production** - A low-investment, high-profit idea.</li>
+                <li>🍄 **Mushroom Farming** - Fast-growing business opportunity.</li>
+            </ul>
+            <button onclick="exploreBusiness()">Explore More Ideas</button>
+        </section>
+
+        <section>
+            <h3>📚 Learn & Get Trained</h3>
+            <p>Join our expert-led **workshops, webinars, and mentorship programs** to gain skills and knowledge.</p>
+            <ul>
+                <li>📈 **Agri-Business Planning**</li>
+                <li>💰 **Funding & Investment Strategies**</li>
+                <li>🔬 **Modern Farming Techniques**</li>
+                <li>📢 **Marketing & Branding for Agriculture Products**</li>
+            </ul>
+            <button onclick="registerWorkshop()">Register for Workshops</button>
+        </section>
+
+        <section>
+            <h3>💰 Funding & Investment</h3>
+            <p>Need capital to **start or grow your agribusiness**? Apply for government schemes, loans, and investor funding.</p>
+            <ul>
+                <li>💵 **Government Subsidies for Farmers**</li>
+                <li>🏦 **Agricultural Business Loans**</li>
+                <li>👨‍💼 **Venture Capital & Angel Investors**</li>
+            </ul>
+            <button onclick="applyFunding()">Apply for Funding</button>
+        </section>
+
+        <section>
+            <h3>📌 Submit Your Business Idea</h3>
+            <p>Have a great agribusiness idea? **Submit your plan** and get expert feedback.</p>
+            <button onclick="submitIdea()">Submit Your Idea</button>
+        </section>
+
+        <section>
+            <h3>🎤 Pitch to Investors</h3>
+            <p>Got a business prototype? **Pitch your idea to investors** and secure funding.</p>
+            <button onclick="pitchInvestor()">Pitch to Investors</button>
+        </section>
+
+        <section>
+            <h3>🌟 Success Stories</h3>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"With KrishiBharat's support, I **scaled my organic farm** and now export to international markets!"</p>
+                    <strong>- Priya Sharma, Organic Farmer</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"I started a **successful Agri-Tech startup** with mentorship from industry experts."</p>
+                    <strong>- Rahul Verma, Agri-Tech Entrepreneur</strong>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>📝 Take Our Entrepreneurship Quiz</h3>
+            <p>Test your knowledge about **agripreneurship and business management**.</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <section>
+            <h3>💬 Connect with Mentors</h3>
+            <p>Need guidance? **Get one-on-one mentorship** from successful agripreneurs.</p>
+            <button onclick="findMentor()">Find a Mentor</button>
+        </section>
+
+        <img src="images/entrepreneurship.jpg" alt="Entrepreneurship Development" style="width:100%; height:auto;">
     </main>
-    
+
     <footer>
-        <p>&copy; 2023 Dynamic Website. All rights reserved.</p>
+        <p>&copy; 2025 KrishiBharat. All rights reserved.</p>
     </footer>
+
+    <script>
+        function exploreBusiness() {
+            alert("Redirecting to business ideas page...");
+            window.location.href = "business-ideas.html";
+        }
+
+        function registerWorkshop() {
+            alert("You have successfully registered for the workshop!");
+        }
+
+        function applyFunding() {
+            alert("Redirecting to funding applications...");
+            window.location.href = "funding.html";
+        }
+
+        function submitIdea() {
+            alert("Redirecting to business idea submission page...");
+            window.location.href = "submit-idea.html";
+        }
+
+        function pitchInvestor() {
+            alert("Redirecting to pitch event page...");
+            window.location.href = "pitch-event.html";
+        }
+
+        function startQuiz() {
+            alert("Redirecting to entrepreneurship quiz...");
+            window.location.href = "quiz.html";
+        }
+
+        function findMentor() {
+            alert("Connecting to available mentors...");
+            window.location.href = "mentorship.html";
+        }
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        nav ul { display: flex; list-style: none; padding: 0; }
+        nav ul li { margin-right: 15px; }
+        .testimonial-slider { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        .testimonial { margin-bottom: 15px; }
+        button { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; margin: 5px 0; }
+    </style>
 </body>
 </html>

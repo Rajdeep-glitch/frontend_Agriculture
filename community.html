@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community - Dynamic Website</title>
+    <title>Community - KrishiBharat</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -16,7 +16,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
-                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -27,32 +27,122 @@
 
     <main>
         <section>
-            <h2>Community</h2>
-            <p>Join our community of agripreneurs and share your experiences:</p>
-            <h3>Upcoming Events</h3>
+            <h2>Welcome to the KrishiBharat Community</h2>
+            <p>Join our vibrant community of **farmers, agripreneurs, and innovators** who are transforming the agricultural sector with cutting-edge ideas and sustainable practices.</p>
+            
+            <h3>🌱 Why Join Us?</h3>
             <ul>
-                <li>Farmers' Market - Every Saturday</li>
-                <li>Organic Farming Workshop - Next Month</li>
-                <li>Annual Agriculture Fair - Date TBD</li>
+                <li>👥 **Network** with agriculture experts, startups, and investors.</li>
+                <li>📚 **Access free resources** on agribusiness and sustainability.</li>
+                <li>💰 **Explore funding opportunities** for your agricultural startup.</li>
+                <li>🎤 **Participate in interactive workshops** and mentorship programs.</li>
             </ul>
-            <h3>Interactive Forum</h3>
-            <p>Participate in our community forum to discuss:</p>
+
+            <h3>📅 Upcoming Events</h3>
             <ul>
-                <li>Best practices in sustainable farming</li>
-                <li>Challenges faced by farmers</li>
-                <li>Innovative solutions and technologies </li>
+                <li><strong>Farmers' Market:</strong> Every Saturday at 10 AM (Connect with buyers and suppliers)</li>
+                <li><strong>Organic Farming Workshop:</strong> March 15, 2025 (Learn modern organic techniques)</li>
+                <li><strong>Agripreneur Pitch Fest:</strong> April 5, 2025 (Showcase your agribusiness idea)</li>
             </ul>
-            <img src="images/community.jpg" alt="Community" style="width:100%; height:auto;">
+            <button onclick="registerEvent()">Register for Events</button>
         </section>
+
         <section>
-            <h2>Join Our Community</h2>
-            <p>Connect with fellow farmers and agripreneurs to share knowledge and experiences.</p>
-            <button onclick="openForum()">Visit Forum</button>
+            <h3>💡 Interactive Forum</h3>
+            <p>Participate in discussions, share experiences, and ask questions about:</p>
+            <ul>
+                <li>🌍 Sustainable farming practices</li>
+                <li>💼 Agripreneurship challenges and solutions</li>
+                <li>🚜 Modern agricultural technologies</li>
+            </ul>
+            <button onclick="openForum()">Join the Discussion</button>
         </section>
+
+        <section>
+            <h3>🔗 Networking & Collaboration</h3>
+            <p>Connect with **like-minded entrepreneurs, mentors, and investors** to grow your agribusiness.</p>
+            <button onclick="openNetworking()">Join Networking Groups</button>
+        </section>
+
+        <section>
+            <h3>📖 Resource Library</h3>
+            <p>Gain access to free guides, eBooks, and reports on:</p>
+            <ul>
+                <li>🚀 Starting an agribusiness</li>
+                <li>📊 Marketing & branding for agriculture products</li>
+                <li>🔬 Innovations in precision farming</li>
+                <li>💰 Government subsidies & funding opportunities</li>
+            </ul>
+            <button onclick="viewResources()">Explore Resources</button>
+        </section>
+
+        <section>
+            <h3>💰 Funding & Investment</h3>
+            <p>Looking for funding? Apply for **agripreneur grants, loans, and venture capital**.</p>
+            <button onclick="applyFunding()">Apply for Funding</button>
+        </section>
+
+        <section>
+            <h3>🌟 Success Stories</h3>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"KrishiBharat helped me get funding for my organic farm. Now, I supply fresh produce to over 500 customers!"</p>
+                    <strong>- Ramesh Patel, Organic Farmer</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"With the guidance of KrishiBharat mentors, I started a profitable agri-tech company!"</p>
+                    <strong>- Meena Joshi, Agri-Tech Entrepreneur</strong>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>💬 Live Chat Support</h3>
+            <p>Have questions? Chat with our community experts now!</p>
+            <button onclick="openChat()">Start Chat</button>
+        </section>
+
+        <img src="images/community.jpg" alt="Community" style="width:100%; height:auto;">
     </main>
 
     <footer>
-        <p>&copy; 2023 Dynamic Website. All rights reserved.</p>
+        <p>&copy; 2025 KrishiBharat. All rights reserved.</p>
     </footer>
+
+    <script>
+        function registerEvent() {
+            alert("You have successfully registered for the event!");
+        }
+
+        function openForum() {
+            window.location.href = "forum.html";
+        }
+
+        function openNetworking() {
+            window.location.href = "networking.html";
+        }
+
+        function viewResources() {
+            window.location.href = "resources.html";
+        }
+
+        function applyFunding() {
+            window.location.href = "funding.html";
+        }
+
+        function openChat() {
+            alert("Live chat support coming soon!");
+        }
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        nav ul { display: flex; list-style: none; padding: 0; }
+        nav ul li { margin-right: 15px; }
+        .hide { display: none; }
+        .testimonial-slider { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        .testimonial { margin-bottom: 15px; }
+        button { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; margin: 5px 0; }
+    </style>
 </body>
 </html>
