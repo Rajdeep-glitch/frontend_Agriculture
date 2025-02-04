@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture Quiz</title>
+    <title>Agriculture Quiz - Dynamic Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="quiz.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Agriculture Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
+                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <div id="quiz-container">
-            <h2>Test Your Knowledge!</h2>
-            <div id="question"></div>
-            <div id="options"></div>
-            <button id="next-button" style="display:none;">Next Question</button>
+        <div id="set-selection">
+            <h2>Select a Question Set</h2>
+            <button onclick="selectSet('Agriculture')">Agriculture</button>
+            <button onclick="selectSet('Technology')">Technology</button>
         </div>
+    
+        <div id="quiz-container" class="hide">
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <p id="question-status"></p>
+            <input type="number" id="question-number" min="1" />
+            <button onclick="changeQuestion()">Go to Question</button>
+            <button id="next-button" class="hide">Next</button>
+            <p id="result"></p>
+        </div>
+    
+        <script src="quiz.js"></script>
+    
     </main>
+
     <footer>
         <p>&copy; 2023 Dynamic Website. All rights reserved.</p>
     </footer>
