@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Map of West Bengal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; }
+    </style>
+    <title>MAP - Dynamic Website</title>
+</head>
+<body>
+    <header>
+        <h1>Agricultural Map of West Bengal, India</h1>
+    </header>
+    <main>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Agricultural Initiative. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([22.9868, 87.8550], 7); // Centered on West Bengal
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Example markers for different crops
+        const crops = [
+            { name: "Rice", location: [23.2580, 88.5630], description: "Major rice-producing area." },
+            { name: "Tea", location: [26.1520, 88.6120], description: "Famous for Darjeeling tea." },
+            { name: "Jute", location: [22.5750, 88.3639], description: "Jute cultivation area." },
+            // Add more crops and their locations
+        ];
+
+        // Add markers to the map
+        crops.forEach(crop => {
+            const marker = L.marker(crop.location).addTo(map);
+            marker.bindPopup(`<b>${crop.name}</b><br>${crop.description}`);
+        });
+    </script>
+</body>
+</html>
